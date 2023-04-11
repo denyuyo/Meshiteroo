@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :post_images, only: [:new, :create, :index, :show]
   
   get "homes/about" => "homes#about", as:'about'
+  get 'post_image/:id' => 'post_images#show'
 end
