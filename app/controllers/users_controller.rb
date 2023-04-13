@@ -14,13 +14,6 @@ class UsersController < ApplicationController
     @user.update(user_params)
     redirect_to user_path(@user.id)
   end
-  
-  def distroy
-    @user = User.find(params[:id])
-    @user.destroy(user_params)
-    flash[:notice] = 'ユーザーを削除しました'
-    redirect_to :root
-  end
 
   private
   def set_user
